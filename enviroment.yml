@@ -1,0 +1,13 @@
+name: solar_test
+channels:
+  - conda-forge
+  - defaults
+  - nrel
+dependencies:
+- python=3.7.*
+- pytest>=4.6
+- scipy
+- numpy
+- pandas
+- timezonefinder
+- nrel-pysam
