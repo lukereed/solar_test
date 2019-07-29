@@ -2,8 +2,7 @@ name: solar_test
 channels:
   - conda-forge
   - defaults
-pip:
-  - NREL-PySAM
+  - nrel
 dependencies:
 - python=3.7.*
 - pytest
@@ -11,3 +10,4 @@ dependencies:
 - numpy
 - pandas
 - timezonefinder
+- nrel-pysam
