@@ -13,8 +13,11 @@ steps:
 - bash: echo "##vso[task.prependpath]$CONDA/bin"
   displayName: Add conda to PATH
 
-- script: conda env create --file environment.yml
-  displayName: Create Anaconda environment
+# - script: conda env create --file environment.yml
+#   displayName: Create Anaconda environment
+
+- bash: pwd
+- bash: ls -l
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
