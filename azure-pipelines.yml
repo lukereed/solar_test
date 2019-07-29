@@ -13,7 +13,9 @@ steps:
 - bash: echo "##vso[task.prependpath]$CONDA/bin"
   displayName: Add conda to PATH
 
-- script: conda env create --file environment.yml
+- script: |
+    conda config --append channels NREL
+    conda env create --file environment.yml
   displayName: Create Anaconda environment
 
 - script: |
