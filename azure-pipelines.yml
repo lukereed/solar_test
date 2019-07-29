@@ -10,16 +10,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: |
-    set PATH=C:\Miniconda3;C:\Miniconda3\Scripts;%PATH%
-    set PYTHONPATH=C:\projects\solar_test
-    cmd: conda config --set always_yes yes --set changeps1 no
-    cmd: conda info -a
-    cmd: conda env create -f environment.yml
-  displayName: 'Install System Environment'
-
-- script: echo %PYTHON_VERSION%
-  displayName: 'Python'
+- script: conda env create --file environment.yml
+  displayName: Create Anaconda environment
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
