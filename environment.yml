@@ -6,7 +6,7 @@ pip:
   - NREL-PySAM
 dependencies:
 - python=3.7.*
-- pytest>=4.6
+- pytest
 - scipy
 - numpy
 - pandas
