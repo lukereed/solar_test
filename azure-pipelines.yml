@@ -1,0 +1,25 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- bash: echo "##vso[task.prependpath]$CONDA/bin"
+  displayName: Add conda to PATH
+
+- script: conda env create --file environment.yml
+  displayName: Create Anaconda environment
+
+- script: |
+    conda info -a
+    dir
+    activate solar_test
+    conda list
+    pytest
+  displayName: 'Run a multi-line script'
