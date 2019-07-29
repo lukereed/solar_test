@@ -13,7 +13,7 @@ steps:
 - bash: echo "##vso[task.prependpath]$CONDA/bin"
   displayName: Add conda to PATH
 
-- script: conda conig --append channels NREL
+- script: conda config --append channels NREL
   displayName: Add NREL Channel
 
 - script: conda env create --file environment.yml
