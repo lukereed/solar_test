@@ -17,6 +17,9 @@ steps:
   displayName: Create Anaconda environment
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
+    conda info -a
+    dir
+    activate solar_test
+    conda list
+    pytest
   displayName: 'Run a multi-line script'
